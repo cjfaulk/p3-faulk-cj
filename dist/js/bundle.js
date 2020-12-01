@@ -1,0 +1,1 @@
+(()=>{"use strict";const t=new class{constructor(t,e){this.title=t,this.logoGif=e}}("Random Lunch Generator","../img/bitmoji.gif");new class{constructor(){this.renderTemplate()}renderTemplate(){const e=`\n      <h1>${t.title}</h1>\n      <p>${t.logoGif}</p>\n    `;document.body.innerHTML=e}}})();
