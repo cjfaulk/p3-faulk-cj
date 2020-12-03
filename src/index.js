@@ -1,5 +1,5 @@
 import { header } from './modules/header';
-
+import { lunchGenerator } from './modules/lunch-generator';
 import { footer } from './modules/footer';
 
 class App {
@@ -17,13 +17,14 @@ class App {
 
       <div id="lunch-content">
         <main>
-          <h2></h2>
-          <h3></h3>
+          <h2>${lunchGenerator.menu}</h2>
+          <h3 id="lunch-name">${lunchGenerator.name}</h3>
+          <img id="lunch-photo" src="${lunchGenerator.photo}">
         <main>
 
         <footer>
           <p>${footer.caption}</p>
-          <button>${footer.button}</button>
+          <button><a href="index.html">${footer.button}</a></button>
         <footer>
       <div>
     `;
