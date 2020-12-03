@@ -17,9 +17,9 @@ class App {
 
       <div id="lunch-content">
         <main>
-          <h2>${lunchGenerator.menu}</h2>
-          <h3 id="lunch-name">${lunchGenerator.name}</h3>
-          <img id="lunch-photo" src="${lunchGenerator.photo}">
+          <h2>Today's Menu:</h2>
+          <h3>${lunchGenerator.name}</h3>
+          <img src="${lunchGenerator.photo}">
         <main>
 
         <footer>

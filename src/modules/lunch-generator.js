@@ -1,7 +1,6 @@
 class LunchGenerator {
 
-  constructor(menu, name, photo) {
-    this.menu = menu;
+  constructor(name, photo) {
     this.name = name;
     this.photo = photo;
   }
@@ -33,4 +32,4 @@ class LunchGenerator {
 
 }
 
-export const lunchGenerator = new LunchGenerator('Menu:', "", "");
+export const lunchGenerator = new LunchGenerator("name", "photo");
