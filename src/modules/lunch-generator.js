@@ -5,31 +5,33 @@ class LunchGenerator {
     this.photo = photo;
   }
 
-  randomizeLunches() {
-    function randomize() {
-      return lunch[Math.floor(Math.random() * lunch.length)];
-    };
-
-    let lunch = [
-      ["Sushi", "img/sushi.jpeg"],
-      ["Burger", "img/burger.jpeg"],
-      ["Cheese Board", "img/cheeseboard.jpeg"],
-      ["Grilled Cheese", "img/grilledcheese.jpeg"],
-      ["Lo Mein", "img/lomein.jpeg"],
-      ["Nachos", "img/nachos.jpeg"],
-      ["Pizza", "img/pizza.jpeg"],
-      ["Salad", "img/salad.jpeg"],
-      ["Spaghetti", "img/spaghetti.jpeg"],
-      ["Sub", "img/sub.jpeg"],
-      ["Tacos", "img/taco.jpeg"],
-    ];
+  colorChange() {
+    document.getElementById("header").display.backgroundColor = "blue";
   }
 
   showResult() {
-    let lunchName = lunch[0][0];
-    let lunchPhoto = lunch[0][1];
+    document.getElementById("lunch-name").innerHTML = this.name;
+    document.getElementById("lunch-photo").src = this.photo;
   }
+};
 
+let lunch = [ // Array of Lunches
+  ["Sushi", "img/sushi.jpeg"],
+  ["Burger", "img/burger.jpeg"],
+  ["Cheese Board", "img/cheeseboard.jpeg"],
+  ["Grilled Cheese", "img/grilledcheese.jpeg"],
+  ["Lo Mein", "img/lomein.jpeg"],
+  ["Nachos", "img/nachos.jpeg"],
+  ["Pizza", "img/pizza.jpeg"],
+  ["Salad", "img/salad.jpeg"],
+  ["Spaghetti", "img/spaghetti.jpeg"],
+  ["Sub", "img/sub.jpeg"],
+  ["Tacos", "img/taco.jpeg"],
+];
+
+function random_item() { // Randomizing Function
+  return lunch[Math.floor(Math.random() * lunch.length)];
 }
 
-export const lunchGenerator = new LunchGenerator("name", "photo");
+const currentLunch = random_item();
+export const lunchGenerator = new LunchGenerator(currentLunch[0], currentLunch[1]);

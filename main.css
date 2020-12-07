@@ -29,6 +29,7 @@ h2 {
 
 h3 {
   color: #ff6fef;
+  font-size: 1.5rem;
 }
 
 footer {
@@ -51,6 +52,10 @@ button a {
   text-decoration: none;
 }
 
+#lunch-img {
+  max-width: 250px;
+}
+
 
 @media (min-width: 800px) {
 
@@ -60,7 +65,7 @@ button a {
   }
 
   header, #lunch-content {
-    height: 100vh;
+    height: 90vh;
     width: 50%;
     padding-top: 100px;
   }
