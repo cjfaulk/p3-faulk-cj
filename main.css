@@ -35,12 +35,12 @@ h3 {
 footer {
   color: #fea92e;
   font-size: 1.4rem;
-  margin-top: 100px;
+  margin-top: 60px;
 }
 
 button {
   padding: 10px;
-  margin: 20px;
+  margin: 75px 0 20px;
   border-radius: 5px;
   background-color: #92f6ec;
   font-family: "Lato", sans-serif;
@@ -54,6 +54,10 @@ button a {
 
 #lunch-img {
   max-width: 250px;
+}
+
+.color-change {
+  color: #35d2fe;
 }
 
 

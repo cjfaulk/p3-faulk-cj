@@ -7,7 +7,7 @@ class App {
   constructor() {
     this.renderTemplate();
     lunchGenerator.showResult();
-    // lunchGenerator.colorChange();
+    lunchGenerator.colorChange();
   }
 
   renderTemplate() {
@@ -26,9 +26,7 @@ class App {
 
         <footer>
           <p>${footer.caption}</p>
-          <button onclick=${lunchGenerator.showResult()}>Button</button>
-          <a href="index.html">${footer.button}</a>
-
+          <button id="button">${footer.button}</button>
         </footer>
       </div>
     `;

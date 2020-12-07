@@ -1,20 +1,3 @@
-class LunchGenerator {
-
-  constructor(name, photo) {
-    this.name = name;
-    this.photo = photo;
-  }
-
-  colorChange() {
-    document.getElementById("header").display.backgroundColor = "blue";
-  }
-
-  showResult() {
-    document.getElementById("lunch-name").innerHTML = this.name;
-    document.getElementById("lunch-photo").src = this.photo;
-  }
-};
-
 let lunch = [ // Array of Lunches
   ["Sushi", "img/sushi.jpeg"],
   ["Burger", "img/burger.jpeg"],
@@ -34,4 +17,29 @@ function random_item() { // Randomizing Function
 }
 
 const currentLunch = random_item();
+
+class LunchGenerator {
+
+  constructor(name, photo) {
+    this.name = name;
+    this.photo = photo;
+  }
+
+  colorChange() {
+    document.getElementById("button").addEventListener('click', ()=>{
+      document.getElementsByTagName("h2")[0].classList.toggle("color-change");
+      document.getElementsByTagName("p")[0].classList.toggle("color-change");
+    });
+  }
+
+
+  showResult() {
+    document.getElementById('button').addEventListener('click', ()=>{
+      const currentLunch = random_item();
+    document.getElementById("lunch-name").innerHTML = currentLunch[0];
+    document.getElementById("lunch-img").src = currentLunch[1];
+    });
+  }
+};
+
 export const lunchGenerator = new LunchGenerator(currentLunch[0], currentLunch[1]);
